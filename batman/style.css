@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.game-board {
+    widxth: 100%;
+    height: 94vh;
+    border-bottom: 60px solid #333333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#63c4eb, #E0F6FF)
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 28vh;
+    animation: pipe-animations 1.5s infinite linear;
+    margin-bottom: -24px;
+}
+
+.batman {
+    width: 35vh;
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: -35px;
+}
+
+.jump {
+    animation: batman-animation 500ms ease-out;
+}
+
+.cloud {
+    width: 700px;
+    padding: 28vh;
+    position: absolute;
+    animation: cloud 20s infinite linear;
+}
+
+.simbulu {
+    position: fixed;
+    margin-left: 79vh;
+}
+
+.predio {
+    width: 100vh;
+    margin-top: 20vh;
+    margin-left: 75vh;
+}
+
+.game-over {
+    visibility: hidden;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(65, 57, 57, 0.363)
+}
+
+.game-play {
+    visibility: hidden;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(65, 57, 57, 0.363)
+}
+
+.restart {
+    height: 60px;
+    width: 350px;
+    border-radius: 10vh;
+    border: none;
+    font-size: 20px;
+    color: black;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.restart:hover {
+    background-color: black;
+    color: yellow;
+    letter-spacing: 1px;
+}
+
+.play {
+    height: 60px;
+    width: 350px;
+    border-radius: 10vh;
+    border: none;
+    font-size: 20px;
+    color: white;
+    background-color: green;
+    cursor: pointer;
+}
+
+.play:hover {
+    background-color: rgb(0, 69, 0);
+    letter-spacing: 1px;
+}
+
+.score {
+    position: absolute;
+    top: 40px;
+    left: 1723px;
+    font-size: 24px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+    font-size: 35px;
+
+}
+
+.scoremax {
+    position: absolute;
+    top: 40px;
+    left: 1600px;
+    font-size: 24px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+    padding: 4vh;
+    font-size: 35px;
+}
+
+@keyframes pipe-animations {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes batman-animation {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 120px
+    }
+
+    50% {
+        bottom: 120px;
+    }
+
+    60% {
+        bottom: 120px
+    }
+
+    100% {
+        bottom: 0px
+    }
+}
+
+@keyframes cloud {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%
+    }
+}
+
+@media (max-width: 620px) {
+    .batman {
+        width: 110px;
+        position: absolute;
+        bottom: 0px;
+    }
+
+    .pipe {
+        position: absolute;
+        bottom: 0;
+        width: 50px;
+        animation: pipe-animations 1s infinite linear;
+    }
+
+    @keyframes blink {
+
+        0%,
+        100% {
+            opacity: 1;
+            /* Visível */
+        }
+
+        50% {
+            opacity: 0;
+            /* Invisível */
+        }
+    }
+}
