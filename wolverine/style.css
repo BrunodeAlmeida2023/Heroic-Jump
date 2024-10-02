@@ -21,24 +21,24 @@ body {
 .pipe {
     position: absolute;
     bottom: 0;
-    width: 28vh;
+    width: 27vh;
     animation: pipe-animations 1.5s infinite linear;
     margin-bottom: -24px;
 }
 
-.batman {
-    width: 35vh;
+.wolverine {
+    width: 20vh;
     position: absolute;
     bottom: 0px;
-    margin-bottom: -35px;
+    margin-bottom: -5px;
 }
 
 .jump {
-    animation: batman-animation 500ms ease-out;
+    animation: wolverine-animation 500ms ease-out;
 }
 
 .cloud {
-    width: 601px;
+    width: 600px;
     padding: 16vh;
     position: absolute;
     animation: cloud 20s infinite linear;
@@ -46,14 +46,15 @@ body {
 
 .simbulu {
     position: fixed;
-    margin-left: 75vh;
-    margin-top: -16vh;
+    margin-left: 80vh;
+    width: 18vh;
+    margin-top: -15vh;
 }
 
 .predio {
-    width: 100vh;
-    margin-top: 9vh;
-    margin-left: 75vh;
+    width: 120vh;
+    margin-top: 25vh;
+    margin-left: 65vh;
 }
 
 .game-over {
@@ -89,13 +90,13 @@ body {
     border: none;
     font-size: 20px;
     color: black;
-    background-color: yellow;
+    background-color: #ffbb00;
     cursor: pointer;
 }
 
 .restart:hover {
     background-color: black;
-    color: yellow;
+    color: #ffbb00;
     letter-spacing: 1px;
 }
 
@@ -146,14 +147,14 @@ body {
     border: none;
     font-size: 20px;
     color: white;
-    background-color: yellow;
+    background-color: #ffbb00;
     color: black;
     cursor: pointer;
 }
 
 .Menu:hover {
     background-color: black;
-    color: yellow;
+    color: #ffbb00;
     letter-spacing: 1px;
 }
 
@@ -172,7 +173,7 @@ body {
     }
 }
 
-@keyframes batman-animation {
+@keyframes wolverine-animation {
     0% {
         bottom: 0;
     }
@@ -205,7 +206,7 @@ body {
 }
 
 @media (max-width: 620px) {
-    .batman {
+    .wolverine {
         width: 110px;
         position: absolute;
         bottom: 0px;
